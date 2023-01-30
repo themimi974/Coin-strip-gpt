@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Jeu du Coin Strip</title>
+  </head>
+  <body>
+    <h1>Jeu du Coin Strip</h1>
+    <table>
+      {% for p in bande %}
+        <td>{{ p }}</td>
+      {% endfor %}
+    </table>
+    <form action="/" method="post">
+      <select name="saisie">
+        {% for c in choix %}
+          <option value="{{ c }}">{{ c }}</option>
+        {% endfor %}
+      </select>
+      <input type="submit" value="Jouer">
+    </form>
+  </body>
+</html>
